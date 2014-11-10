@@ -32,28 +32,29 @@ public class MatchingPattern {
 	        Pattern pattern = Pattern.compile(regex_final);
 	        Matcher matcher = pattern.matcher(input);
 	        
-//	        boolean flag = false;
-//	        
-//	        String[] group = new String[20];
-//	        String group1 = matcher.group(0);
-//	        System.out.println(group1);
-//	        
-//	        for(int i=0;i<h.size();i++) {
-//	        	group[i] = matcher.group(i); 
-//	        }
-//	        
-//	        for(int i=0;i<group.length;i++) {
-//	        	for(int j=0;j<group.length;j++) {
-//	        		if(i==j)
-//	        			continue;
-//	        		else if(group[i]==group[j])
-//	        			flag = true;
-//	        	}
-//	        }
-//	     
+	        boolean flag = false;
+	        String[] group = new String[2];
+	        
+	        int f=0;
+	        while(matcher.find()) {
+	        	group[f] = matcher.group(f);
+	        	f++;
+	        }
+	        
+	        // Its finding only one group
+	        for(int i=0;i<group.length;i++) {
+	        	for(int j=0;j<group.length;j++) {
+	        		if(i==j)
+	        			continue;
+	        		else if(group[i]==group[j])
+	        			flag = true;
+	        	}
+	        	System.out.println(group[i]);
+	        }
+	     
 	        boolean matches = matcher.matches();
 	        
-	        if(matches /* && flag == false*/)
+	        if(matches && flag == false)
 	        	return 1;
 	        else return 0;
 	    }
