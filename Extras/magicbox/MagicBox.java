@@ -78,9 +78,9 @@ public class MagicBox {
 		return max;
 	}
 
-//	private static int magic(char[][] matrix, int col, int max_ref) {
-//		// TODO Auto-generated method stub
-//		int res,max_ending_here;
+	private static int magic(char[][] matrix, int col, int max_ref) {
+		// TODO Auto-generated method stub
+		int res,max_ending_here;
 //		for(int i = 1; i < col; i++)
 //		    {
 //		        res = magic(matrix, i, max_ref);
@@ -89,9 +89,10 @@ public class MagicBox {
 //		    }
 //		if (max_ref < max_ending_here)
 //		       max_ref = max_ending_here;
-//		
-//		return max_ending_here;
-//	}
+		max_ending_here=0;
+		
+		return max_ending_here;
+	}
 	
 	
 
